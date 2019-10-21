@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ListaProductos</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="ListaProductos.css">
+</head>
+
+<body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- Barra de navegacion -->
+    <header class="top-line">
+        <a href="PaginaPrincipal.html" class="logo"><img src="logo.png
+          " alt="logo alt"></a>
+        <div class="phone"><i class="fa fa-phone"></i>Contacto +343 737 37 77</div>
+        <div class="mobile-menu-btn"><i class="fa fa-bars"></i> Electronica</div>
+        <nav class="main-menu top-menu">
+            <ul>
+                <li class="active"><a href="PaginaPrincipal.html">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <div class="card bg-light mb-3">
+                    <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categorias
+                    </div>
+                    <ul class="list-group category_block">
+
+                        <label class="list-group-item" for="Audio y video">Audio y Video <input type="checkbox"
+                                value="Audio y video" name="Audio y video"></label>
+
+
+                        <label class="list-group-item" for="Videojuegos">Videojuegos <input type="checkbox"
+                                value="Videojuegos" name="Videojuegos"></label>
+
+
+
+                        <label class="list-group-item" for="Celulares y tabletas">Celulares y tabletas <input type="checkbox"
+                                value="Celulares y tabletas" name="Celulares y tabletas"></label>
+                        </ul>
+                </div>
+
+                <div class="card bg-light mb-3">
+                        <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Marca
+                        </div>
+                        <ul class="list-group category_block">
+    
+                            <label class="list-group-item" for="Apple">Apple <input type="checkbox"
+                                    value="Apple" name="Apple"></label>
+    
+    
+                            <label class="list-group-item" for="Microsoft">Microsoft <input type="checkbox"
+                                    value="Microsoft" name="Microsoft"></label>
+    
+    
+    
+                            <label class="list-group-item" for="ASony">Sony <input type="checkbox"
+                                    value="Sony" name="Sony"></label>
+                            </ul>
+                    </div>
+                <div class="container">
+                    <form class="form-inline my-2 my-lg-0" data-tipo="Busqueda">
+                        <div class="input-group input-group-sm">
+                            <input style="width: 185px; height: 100px;" type="text" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombre...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-secondary btn-number">
+                                    <i style="font-size: 20px;"class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+
+                <div class="container">
+                        <form class="form-inline my-2 my-lg-0" data-tipo="Busqueda">
+                            <div class="input-group input-group-sm">
+                                <input style="width: 185px; height: 100px;" type="text" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por precio...">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-secondary btn-number">
+                                        <i style="font-size: 20px;"class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <table class="table table-striped custab">
+                            <thead>
+
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Proveedor</th>
+                                    <th>Número de serie</th>
+                                    <th>Precio</th>
+                                    <th>Rating</th>
+                                    <th>Descripcion</th>
+                                    <th>Puntos que otorga</th>
+                                    <th class="text-center">Edición</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>1</td>
+                                <td>Ipad2</td>
+                                <td>Apple</td>
+                                <td>1234</td>
+                                <td>345</td>
+                                <td>4.5</td>
+                                <td>Ipad de ultima generación de 64GB</td>
+                                <td>40</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span
+                                            class="glyphicon glyphicon-edit"></span> <span
+                                            class="Edit-Del">Editar</span></a> <a href="#"
+                                        class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>
+                                        <span class="Edit-Del">Elimin</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ipad Pro</td>
+                                <td>Apple</td>
+                                <td>1234</td>
+                                <td>345</td>
+                                <td>4.5</td>
+                                <td>Ipad de ultima generación de 64GB</td>
+                                <td>40</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span
+                                            class="glyphicon glyphicon-edit"></span> <span class="Edit/Del"><span
+                                                class="Edit-Del">Editar</span></span></a> <a href="#"
+                                        class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>
+                                        <span class="Edit-Del">Elimin</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ipad3</td>
+                                <td>Apple</td>
+                                <td>1234562</td>
+                                <td>345</td>
+                                <td>4.5</td>
+                                <td>Ipad de ultima generación de 64GB</td>
+                                <td>402</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span
+                                            class="glyphicon glyphicon-edit"></span> <span
+                                            class="Edit-Del">Editar</span></a> <a href="#"
+                                        class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>
+                                        <span class="Edit-Del">Elimin</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ipad4</td>
+                                <td>Apple</td>
+                                <td>1234</td>
+                                <td>345</td>
+                                <td>4.5</td>
+                                <td>Ipad de ultima generación de 64GB</td>
+                                <td>60</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span
+                                            class="glyphicon glyphicon-edit"></span> <span
+                                            class="Edit-Del">Editar</span></a> <a href="#"
+                                        class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>
+                                        <span class="Edit-Del">Elimin</span></a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ipad5</td>
+                                <td>Apple</td>
+                                <td>12345657</td>
+                                <td>345</td>
+                                <td>4.5</td>
+                                <td>Ipad de ultima generación de 64GB</td>
+                                <td>50</td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span
+                                            class="glyphicon glyphicon-edit"></span> <span
+                                            class="Edit-Del">Editar</span></a> <a href="#"
+                                        class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span>
+                                        <span class="Edit-Del">Elimin</span></a></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="NewProduct"><a href="PaginaPrincipal.html">Añadir producto</a></div>
+
+</body>
+
+</html>
