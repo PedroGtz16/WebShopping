@@ -1,0 +1,227 @@
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/401b6fc175.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link rel="stylesheet" href="listaProductos.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegacion -->
+    <header class="top-line">
+        <a href="PaginaPrincipal.html" class="logo"><img src="logo.png
+                        " alt="logo alt"></a>
+        <div class="phone"><i class="fa fa-phone"></i>Contacto +343 737 37 77</div>
+        <div class="mobile-menu-btn"><i class="fa fa-bars"></i> Electronica</div>
+        <nav class="main-menu top-menu">
+            <ul>
+                <li class="active"><a href="PaginaPrincipal.html">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+                <li><a href="listausuarios.html">Consulta Usuarios</a></li>
+                <li><a href="listaVentas.html">Consulta Ventas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-3" id = "filtros"> 
+                
+
+                <div class="card bg-light mb-3">
+                        <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Marca por proveedor
+                        </div>
+                        <ul class="list-group category_block" id = "MarcaProveedor">
+    
+                            <label class="list-group-item" for="Apple">Apple <input type="checkbox"
+                                    value="Apple" name="Apple"></label>
+    
+    
+                            <label class="list-group-item" for="Microsoft">Microsoft <input type="checkbox"
+                                    value="Microsoft" name="Microsoft"></label>
+    
+    
+    
+                            <label class="list-group-item" for="ASony">Sony <input type="checkbox"
+                                    value="Sony" name="Sony"></label>
+                            </ul>
+                    </div>
+                <div class="container">
+                    <form class="form-inline my-2 my-lg-0" data-tipo="Busqueda">
+                        <div class="input-group input-group-sm">
+                            <input style="width: 185px; height: 100px;" type="text" class="form-control" aria-label="Small"
+                                aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombre...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-secondary btn-number">
+                                    <i style="font-size: 20px;"class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+
+                <div class="container">
+                        <form class="form-inline my-2 my-lg-0" data-tipo="Busqueda">
+                            <div class="input-group input-group-sm">
+                                <input style="width: 185px; height: 100px;" type="text" class="form-control" aria-label="Small"
+                                    aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por precio...">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-secondary btn-number">
+                                        <i style="font-size: 20px;"class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+
+            </div>
+            <div class="col"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <table class="table table-striped custab" id ="tablaProductos">
+                            <thead id = "listaProductos">
+
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Proveedor</th>
+                                    <th>Número de serie</th>
+                                    <th>Precio</th>
+                                    <th>Rating</th>
+                                    <th>Descripcion</th>
+                                    <th>Puntos</th>
+                                    <th>ID</th>
+                                    <th class="text-center">Edición</th>
+                                </tr>
+                            </thead>
+                           
+                           
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+      <!-- Modal para editar -->
+      <div class="modal fade" id="Edicion" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h5 class="modal-title">Actualizar usuario</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                    </div>
+                <div class="modal-body">
+                  <form action="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <p>Editar nombre</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="user"><i class="fas fa-user"></i></span>
+                                    <input type="text" id="nombreEditar" class="form-control" placeholder="nombre" aria-label="Password" aria-describedby="user">
+                                </div>
+                          </div>
+                      </div>
+                        <div class="row">
+                                <p>Editar proveedor</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="user"><i class="fas fa-list-alt"></i></span>
+                                        <input type="text" id="proveedorEditar" class="form-control" placeholder="proveedor" aria-label="Password" aria-describedby="user">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row">
+                                <p>Editar numero de serie</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                        <input type="text" id="numeroSerieEditar" class="form-control" placeholder="numero de serie" aria-label="Password" aria-describedby="user">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row">
+                                <p>Editar precio</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                        <input type="number" id="precioEditar" class="form-control" placeholder="precio" aria-label="Password" aria-describedby="user">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row">
+                                <p>Editar rating</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                        <input type="text" id="ratingEditar" class="form-control" placeholder="rating" aria-label="Password" aria-describedby="user">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="row">
+                            <p>Editar descripcion</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                    <textarea name="message" id="descripcionEditar" cols="30" rows="10"></textarea>
+                                    <!-- <input type="text" id="descripcionEditar" class="form-control" placeholder="descripcion" aria-label="Password" aria-describedby="user"> -->
+                                </div>
+                          </div>
+                    </div>
+                    
+                            <button type="button" class="btn btn-success" id ="ActualizarBtn" data-dismiss="modal">Actualizar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>  
+                  </form>      
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal para borrar -->
+<div class="modal fade" id="Borrar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog"
+        style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width:125%"
+        role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">¿Estas seguro de eliminar este producto?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" id = "btnEliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="NewProduct"><a href="RegistroProducto.html">Añadir producto</a></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="listaProductos.js"></script>
+</body>

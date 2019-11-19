@@ -1,0 +1,94 @@
+{
+  "usuarios": [
+    {
+      "nombre": "PRUEBS",
+      "apellido": "1|DSFGVHBHJGFDSAA",
+      "password": "12345",
+      "fechaNacimiento": "2019-11-26",
+      "metodoPago": "tarjeta credito",
+      "telefono": "12@12",
+      "puntos": "0",
+      "correo": "12@12",
+      "membresia": "",
+      "tipoUsuario": "ADMIN",
+      "id": 1
+    },
+    {
+      "nombre": "Nicolas",
+      "apellido": "Ramirez",
+      "password": "9876",
+      "fechaNacimiento": "2000-02-02",
+      "metodoPago": "Tarjeta credito",
+      "telefono": "098765",
+      "puntos": "0",
+      "correo": "RAC@iteso.mx",
+      "membresia": "bronce",
+      "tipoUsuario": "ADMIN",
+      "id": 2
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Oritz",
+      "correo": "1234@1234",
+      "password": "123456",
+      "puntos": 0,
+      "membresia": "",
+      "fechaNacimiento": "2019-11-21",
+      "metodoPago": "",
+      "telefono": "12345678",
+      "tipoUsuario": "USUARIO",
+      "id": 3
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Lopez",
+      "password": "12345",
+      "fechaNacimiento": "2000-01-01",
+      "metodoPago": "Efectivo",
+      "telefono": "1234567",
+      "puntos": "0",
+      "correo": "13@13",
+      "membresia": "oro",
+      "tipoUsuario": "ADMIN",
+      "id": 4
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Audifonos diadema 2",
+      "proveedor": "Electronica Sanchos",
+      "numeroSerie": "AUD-2245",
+      "precio": "300",
+      "rating": "5",
+      "descripcion": "Audífonos de diadema perfectos para escuchar músicasafdasgdfgadf",
+      "puntosOtorgados": 70,
+      "id": 1
+    }
+  ],
+  "ventas": [
+    {
+      "nombre": "Venta12",
+      "cantidad": "22",
+      "fechaVenta": "2013-02-25",
+      "precioProducto": "100",
+      "ganancia": 2200,
+      "id": 1
+    },
+    {
+      "nombre": "iPAD",
+      "cantidad": "10",
+      "fechaVenta": "23232-03-22",
+      "precioProducto": "12",
+      "ganancia": 120,
+      "id": 2
+    },
+    {
+      "nombre": "11234",
+      "cantidad": "12345",
+      "fechaVenta": "2019-11-05",
+      "precioProducto": "123",
+      "ganancia": 1518435,
+      "id": 3
+    }
+  ]
+}
