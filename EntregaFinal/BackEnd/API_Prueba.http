@@ -1,0 +1,80 @@
+###
+@host = http://localhost:3000
+###
+POST {{host}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "apellido": "Ramos",
+    "password": "12345",
+    "fechaNacimiento": "2079-22-22",
+    "telefono":"12345",
+    "correo":"14@14",
+    "tipoUsuario":"ADMIN",
+    "id":3
+}
+
+###
+POST {{host}}/api/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Aranza",
+    "apellido": "Vinos y Licores",
+    "password": "12345",
+    "fechaNacimiento": "2018-22-22",
+    "telefono":"1234556",
+    "correo":"12@1235",
+    "tipoUsuario":"ADMIN",
+    "id":2
+}
+
+###
+DELETE {{host}}/api/usuarios/1
+Content-Type: application/json
+
+### 
+GET {{host}}/api/usuarios
+Content-Type: application/json
+
+###
+GET {{host}}/api/ventas
+Content-Type: application/json
+
+
+###
+POST {{host}}/api/ventas
+Content-Type: application/json
+
+{
+    "nombre": "Camiseta Polo",
+    "cantidad": 3,
+    "fechaVenta": "2019-03-03",
+    "precioProducto": 400,
+    "id": 2
+}
+
+###
+DELETE {{host}}/api/ventas/2
+Content-Type: application/json
+
+
+###
+GET {{host}}/api/productos
+Content-Type: application/json
+
+
+###
+POST {{host}}/api/productos
+Content-Type: application/json
+
+{
+    "nombre": "Audifonos",
+    "proveedor": "STEREN",
+    "numeroSerie": "AQE-234",
+    "precio": 230,
+    "rating": 23,
+    "descripcion": "Audifonos de audio",
+    "id": 1
+}

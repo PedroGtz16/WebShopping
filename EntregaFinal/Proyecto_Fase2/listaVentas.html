@@ -1,0 +1,149 @@
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/401b6fc175.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link rel="stylesheet" href="listausuarios.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegacion -->
+    <header class="top-line">
+        <a href="PaginaPrincipal.html" class="logo"><img src="logo.png
+                        " alt="logo alt"></a>
+        <div class="phone"><i class="fa fa-phone"></i>Contacto +343 737 37 77</div>
+        <div class="mobile-menu-btn"><i class="fa fa-bars"></i> Electronica</div>
+        <nav class="main-menu top-menu">
+            <ul>
+                <li class="active"><a href="PaginaPrincipal.html">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Registro.html">Registro</a></li>
+                <li><a href="listaProductos.html">Consulta Productos</a></li>
+                <li><a href="listaUsuarios.html">Consulta Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead id="listaVentas">
+
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Fecha venta</th>
+                        <th> Precio</th>
+                        <th>Ganancia</th>
+                        <th>ID</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal para editar -->
+    <div class="modal fade" id="Edicion" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">Actualizar venta</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <p>Editar nombre</p>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="user"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="nombreEditar" class="form-control" placeholder="nombre" aria-label="Password" aria-describedby="user">
+                                    </div>
+                              </div>
+                          </div>
+                            <div class="row">
+                                    <p>Editar cantidad</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="user"><i class="fas fa-list-alt"></i></span>
+                                            <input type="number" id="cantidadEditar" class="form-control" placeholder="cantidad" aria-label="Password" aria-describedby="user">
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                    <p>Editar fecha venta</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                            <input type="date" id="fechaEditar" class="form-control" placeholder="fecha" aria-label="Password" aria-describedby="user">
+                                        </div>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                    <p>Editar precio</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="user"><i class="fas fa-key"></i></span>
+                                            <input type="number" id="precioEditar" class="form-control" placeholder="precio" aria-label="Password" aria-describedby="user">
+                                        </div>
+                                  </div>
+                            </div>
+                           
+                        
+                                <button type="button" class="btn btn-success" id ="ActualizarBtn" data-dismiss="modal">Actualizar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>  
+                      </form>      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Modal para borrar -->
+    <div class="modal fade" id="Borrar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog"
+            style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width:125%"
+            role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Estas seguro de eliminar esta venta?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" id = "btnEliminar">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div  style="padding-left: 510px; font-size: 28px"><a href="RegistroVenta.html">Añadir venta</a></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="listaVentas.js"></script>
+</body>

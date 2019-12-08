@@ -1,0 +1,249 @@
+body {
+    font-family: 'Arimo', sans-serif;
+    padding-top: 50px;
+}
+
+.menu-bar {
+    position: absolute;
+    top: 20px;    
+    left: 50%;
+    height: 14px;
+    margin-left: -10px;
+}
+
+.bars {
+    display: block;
+    width: 20px;
+    height: 3px;    
+    background-color: #333;
+    box-shadow: 0 5px 0 #333, 0 10px 0 #333;
+}
+
+.menu {
+    display: none; 
+    width: 100%;
+    padding: 30px 10px 50px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+}
+.menu ul {
+    margin-bottom: 0;
+}
+.menu a {
+    color: #333; 
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.menu a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+
+/*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+.bloc_left_price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+.category_block li:hover {
+    background-color: #007bff;
+}
+.category_block li:hover a {
+    color: #ffffff;
+}
+.category_block li a {
+    color: #343a40;
+}
+.add_to_cart_block .price {
+    color: #c01508;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 0;
+}
+.add_to_cart_block .price_discounted {
+    color: #343a40;
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 140%;
+}
+.product_rassurance {
+    padding: 10px;
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+}
+.product_rassurance .list-inline {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product_rassurance .list-inline li:hover {
+    color: #343a40;
+}
+.reviews_product .fa-star {
+    color: gold;
+}
+.pagination {
+    margin-top: 20px;
+}
+footer {
+    background: #343a40;
+    padding: 40px;
+}
+footer a {
+    color: #f8f9fa!important
+}
+
+
+
+/* -------------------- *//* -------------------- */
+
+                /* Para la barra de navegación */
+                .top-line {
+                    background-color: #222;
+                    position: relative;
+                    height: 60px;
+                }
+                
+                .top-line .logo {
+                    padding-left: 25px;
+                    left: 0;
+                    display: inline-block;
+                    position: absolute;
+                    line-height: 55px;
+                }
+                
+                .main-menu {
+                    padding: 0 130px;
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                .main-menu ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                .main-menu ul li {
+                    display: inline-block;
+                }
+                
+                .main-menu ul li.active a {
+                    color: #fff;
+                }
+                
+                .main-menu ul li:hover a {
+                    color: #f5f5f5;
+                }
+                
+                .main-menu ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: 0 15px;
+                    line-height: 60px;
+                    display: block;
+                    transition: color .25s ease, background-color .25s ease;
+                }
+                .mobile-menu-btn {
+                    color: #fff;
+                    text-align: center;
+                    line-height: 65px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    display: none;
+                    white-space: nowrap;
+                }
+                
+                .mobile-menu {
+                    display: none;
+                    background-color: #2a2a2a;
+                    border-top: #343434;
+                }
+                
+                .mobile-menu .top-menu {
+                    display: block;
+                }
+                
+                .mobile-menu .top-menu ul {
+                    padding: 0;
+                }
+                
+                .mobile-menu .top-menu ul li {
+                    display: block;
+                    text-align: center;
+                }
+                
+                .mobile-menu .top-menu ul li:hover {
+                    background-color: #343434;
+                }
+                
+                .mobile-menu .top-menu ul li a {
+                    padding: 0;
+                    line-height: 40px;
+                }
+                
+                .mobile-menu .top-menu ul li a:hover {
+                    text-decoration: none;
+                }
+                .phone {
+                    position: absolute;
+                    padding-right: 25px;
+                    padding-left: 10px;
+                    right: 0;
+                    color: #fff;
+                    line-height: 55px;
+                    cursor: pointer;
+                    transition: color .25s ease;
+                    font-size: 24px;
+                }
+                
+                .phone i {
+                    padding-right: 10px;
+                    font-size: 20px;
+                }
+                @media (max-width: 575.98px) {
+                    .top-line .logo {
+                        padding-left: 5px;
+                    }
+                
+                    .top-line .phone {
+                        display: none;
+                    }
+                
+                    .top-line .mobile-menu-btn {
+                        padding-right: 5px;
+                        display: block;
+                        text-align: right;
+                        font-size: 20px;
+                        line-height: 55px;
+                    }
+                
+                    .main-menu {
+                        padding: 0 30px;
+                    }
+                }
+                @media (max-width: 1199.98px) {
+                    .main-menu {
+                        display: none;
+                    }
+                
+                    .mobile-menu-btn {
+                        display: block;
+                    }
+                }
+
+                body{
+                    margin: 0;
+                    padding: 0;
+                }
